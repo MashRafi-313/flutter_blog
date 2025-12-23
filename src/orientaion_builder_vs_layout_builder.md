@@ -163,6 +163,15 @@ It still relies on **constraints**, just like your manual `LayoutBuilder` check.
 
 **Tip:** Both are efficient. Don't wrap entire app, use at specific responsive points.
 
+# Why Flutter Introduced OrientationBuilder
+
+Even though `LayoutBuilder` can technically handle orientation by checking `constraints.maxWidth` vs
+`constraints.maxHeight`, `OrientationBuilder`:
+
+- **Makes code more readable** for orientation-specific layouts.
+- **Provides semantic clarity**: other developers instantly know this layout depends on orientation.
+- **Simplifies quick mobile-only UI changes** without dealing with detailed constraints.
+
 ## Rule of Thumb: Choosing Between LayoutBuilder and OrientationBuilder
 
 When deciding which widget to use, keep the following guidelines in mind:
